@@ -1,0 +1,5 @@
+#tabsContent tp-yt-paper-tab:nth-of-type(2)[disabled] {
+    pointer-events: all !important;
+    cursor: pointer !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}

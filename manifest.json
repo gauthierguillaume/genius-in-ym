@@ -1,0 +1,31 @@
+{
+   "content_scripts": [ {
+      "css": [ "music_styles.css" ],
+      "js": [ "music_content.js" ],
+      "matches": [ "https://music.youtube.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "genius_content.js" ],
+      "matches": [ "https://genius.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "genius",
+         "path": "genius_rules.json"
+      } ]
+   },
+   "description": "Turn YouTube Music into a lyrical genius!",
+   "host_permissions": [ "*://*.genius.com/*", "*://*.music.youtube.com/*" ],
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhK9psnfeJiUBQVpg59M1wkcs3Dlvp1ncCZ41R4cvYJdRbVbxdZrF68fpicyRZCxfNmptgfTbF+zI+bUGUsH/j/zHZVj1FaJsLl6GEM2V1BloPiAuXwVLrGaTMvu3KVRvpyiE0qWjWg62HmZoYZa8pHn9Qa2iN74D5c/7rAw1/QRmrxOLy/JAjTrdSWGH6UkTQrXdR1oD8whSGjjF4Be9rxjyKbMhcmxFUcZDaSz9mBclyxEVw8VqnzHlSQ98AI+CGOMayvotfnGO+OL9t0U5owqemeYsF6N/YKaHQrEc6SFKa//lCcmX4XJjBiBA4XxpX2KZOCiK6ExOjSjGAgIBnQIDAQAB",
+   "manifest_version": 3,
+   "name": "Genius Lyrics for YouTube Music",
+   "permissions": [ "declarativeNetRequestWithHostAccess" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}
